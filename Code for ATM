@@ -1,0 +1,72 @@
+print("Welcome!")
+print("Please choose from the following options: ")
+print("1 - Display the balance")
+print("2 - Withdraw funds")
+print("3 - Deposit funds")
+print("4 - Return card")
+print("9 - Exit")
+balance=1000
+
+
+option=int(input("Please choose your option: "))
+if option == 1:
+    print("Curent balance:£ ", balance)
+    option=int(input("Please choose your another option: "))
+if option == 2:
+    print("1 - £10")
+    print("2 - £20")
+    print("3 - £40")
+    print("4 - £60")
+    print("5 - £80")
+    print("6 - £100")
+    print("7 - Other amount")
+    print("8 - Return to main menu")
+    option2=int(input("Please choose amount: "))
+    if option2 == 1:
+      print("Money has been withdrawn")
+      balance=balance - 10
+      option=int(input("Please choose your another option: "))
+    if option2 == 2:
+      print("Money has been withdrawn")
+      balance=balance - 20
+      option=int(input("Please choose your another option: "))
+    if option2 == 3:
+      print("Money has been withdrawn")
+      balance=balance - 40
+      option=int(input("Please choose your another option: "))
+    if option2 == 4:
+      print("Money has been withdrawn")
+      balance=balance - 60
+      option=int(input("Please choose your another option: "))
+    if option2 == 5:
+      print("Money has been withdrawn")
+      balance=balance - 80
+      option=int(input("Please choose your another option: "))
+    if option2 == 6:
+      print("Money has been withdrawn")
+      balance=balance - 100
+      option=int(input("Please choose your another option: "))
+    elif option2 == 7:
+      amount=int(input("What's the other amount?"))
+      if amount % 10 == 0:
+        print("Please don't forget your money")
+if option == 3:
+  print("1 - Deposit")
+  print("2 - Return to main menu")
+  option3 = int(input("Please choose the option"))
+  if option3 == 1:
+    amount2 = int(input("Please enter amount you wish to deposit"))
+    balance=balance+amount2
+    print("Deposit succesful! Your current balance:",  balance)
+    option=int(input("Please choose your another option: "))
+  elif option3 == 2:
+    option=int(input("Please choose your another option: "))
+if option == 4:
+  print("Please return your card now")
+  option=int(input("Please choose your another option: "))
+#break doesn't work, not sure why
+if option == 9:
+  print("Have a good day!")
+else:
+  print("Wrong number, please try again")
+  option=int(input("Please choose your another option: "))
